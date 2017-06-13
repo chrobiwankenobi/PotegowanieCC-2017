@@ -5,6 +5,7 @@
  */
 package pl.edu.amu.wmi.dino.ultrapotegowanie;
 
+
 import java.util.Random;
 
 /**
@@ -37,6 +38,28 @@ public class UltraPotegowanie {
         if (result.contains("E")){
             return String.format("%.12f", power).replace(",",".");
         }
+        return result;
+    }
+        public static String potegujPrzyblizenie(String a, String b , int przyblizenie){
+        double aa;
+        double bb;
+        
+        aa = szesnastkowe(a);
+        bb = szesnastkowe(b);
+
+        double power = Math.pow(aa, bb);
+        if(aa == 0 && bb != 0){
+            String xo = "0";
+            return xo;
+        }
+        if (power % 1 == 0)
+               return Long.toString(Math.round(power));
+        String result =  Double.toString(power);
+        
+        if (result.contains("E")){
+            return String.format("%.12f", power).replace(",",".");
+        }
+        result=result.substring(0, przyblizenie);
         return result;
     }
     public static double szesnastkowe(String a){

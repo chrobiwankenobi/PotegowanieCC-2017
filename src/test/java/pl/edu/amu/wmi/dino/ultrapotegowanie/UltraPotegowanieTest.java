@@ -147,6 +147,21 @@ public class UltraPotegowanieTest {
     
     @Test
     public void testUlamki(){
-        assertEquals("0.44721",UltraPotegowanie.poteguj("0.2","0.5"));
+    
+        assertEquals("0.44721",UltraPotegowanie.potegujPrzyblizenie("0.2","0.5",7));
 }
+    //Daniel Grabowski
+    @Test
+    public void testPotegieComplexnumber(){
+        assertEquals("2+i",UltraPotegowanie.poteguj("-4", "0.5"));
+    }
+    @Test
+    public void testPotegiOdwrotnosci(){
+        assertEquals("-0.015625",UltraPotegowanie.poteguj("-4", "-3"));
+    }
+    @Test
+    public void testPotegiNotacja(){
+        assertEquals("10000000000",UltraPotegowanie.poteguj("0.1e2", "0.1e2"));
+    }
+   
 }

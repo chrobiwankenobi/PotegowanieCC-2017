@@ -80,15 +80,14 @@ public class UltraPotegowanieTest {
     
     @Test
      public void testPotegujSzumi2() {
-        assertEquals("0.0000000000001", UltraPotegowanie.poteguj("1000000", "-2"));
+        assertEquals("0.000000000001", UltraPotegowanie.poteguj("1000000", "-2"));
     }
      
     @Test
      public void testPotegujSzumi3() {
         assertEquals("0", UltraPotegowanie.poteguj("0", "1000"));
-
-     }  
-
+     }
+     /////////
      /**
      * Mieczyslaw Krawiarz
      * 416098
@@ -140,32 +139,6 @@ public class UltraPotegowanieTest {
     public void testNotacjaNaukowa2(){
         assertEquals("0.00000025",UltraPotegowanie.poteguj("2e3","-2"));
     }
-    
-    
-    
-    /* 
-    Ruslan Pidhajnyj
-    416145
-    */
-    
-    
-    public void testrus1()
-    {
-        assertEquals("1", UltraPotegowanie.poteguj("01", "01"));
-    }
-    
-    public void testrus2()
-    {
-      assertEquals("4", UltraPotegowanie.poteguj("01", "4"));
-    }
-    
-    public void testrus3()
-    {
-      assertEquals("4", UltraPotegowanie.poteguj("10", "10"));  
-    }
-    
-    
-    
   
      /*
      * Agata Buszczak
@@ -174,6 +147,21 @@ public class UltraPotegowanieTest {
     
     @Test
     public void testUlamki(){
-        assertEquals("0.44721",UltraPotegowanie.poteguj("0.2","0.5"));
+    
+        assertEquals("0.44721",UltraPotegowanie.potegujPrzyblizenie("0.2","0.5",7));
 }
+    //Daniel Grabowski
+    @Test
+    public void testPotegieComplexnumber(){
+        assertEquals("2+i",UltraPotegowanie.poteguj("-4", "0.5"));
+    }
+    @Test
+    public void testPotegiOdwrotnosci(){
+        assertEquals("-0.015625",UltraPotegowanie.poteguj("-4", "-3"));
+    }
+    @Test
+    public void testPotegiNotacja(){
+        assertEquals("10000000000",UltraPotegowanie.poteguj("0.1e2", "0.1e2"));
+    }
+   
 }

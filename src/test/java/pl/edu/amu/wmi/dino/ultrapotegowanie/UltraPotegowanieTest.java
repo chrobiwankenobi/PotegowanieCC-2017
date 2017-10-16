@@ -125,7 +125,7 @@ public class UltraPotegowanieTest {
             start += "0";
             wynik = wynik.replace('0', '1');
             wynik += "01";
-            assertEquals(wynik, UltraPotegowanie.poteguj(start, "-1"));
+            assertEquals(wynik, UltraPotegowanie.poteguj(start, "-2"));
         }
     }
     
@@ -137,7 +137,7 @@ public class UltraPotegowanieTest {
     
     @Test
     public void testNotacjaNaukowa2(){
-        assertEquals("0.00125",UltraPotegowanie.poteguj("2e3","-2"));
+        assertEquals("0.00000125",UltraPotegowanie.poteguj("2e3","-3"));
     }
   
      /*

@@ -125,7 +125,7 @@ public class UltraPotegowanieTest {
             start += "0";
             wynik = wynik.replace('1', '0');
             wynik += "01";
-            assertEquals(wynik, UltraPotegowanie.poteguj(start, "2e3", "-2"));
+            assertEquals(wynik, UltraPotegowanie.poteguj(start, "-2"));
         }
     }
     

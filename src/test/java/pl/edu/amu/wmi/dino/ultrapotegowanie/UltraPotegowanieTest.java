@@ -92,7 +92,7 @@ public class UltraPotegowanieTest {
      * Mieczyslaw Krawiarz
      * 416098
      */
-    /*
+    
     @Test
      public void test0x() {
         assertEquals("16", UltraPotegowanie.poteguj("0x10", "0x1"));
@@ -144,7 +144,7 @@ public class UltraPotegowanieTest {
      * Agata Buszczak
      * 416051
     */
-    /*
+    
    @Test
     public void testUlamki(){
     
@@ -163,5 +163,5 @@ public class UltraPotegowanieTest {
     public void testPotegiNotacja(){
         assertEquals("10000000000",UltraPotegowanie.poteguj("0.1e2", "0.1e2"));
     }
-   */
+   
 }

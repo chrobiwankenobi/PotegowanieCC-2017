@@ -122,10 +122,10 @@ public class UltraPotegowanieTest {
         String start = "10000000";
         String wynik = "0.000000000001";
         for(int i=0;i<10;i++){
-            start += "10";
+            start += "0";
             wynik = wynik.replace('1', '0');
             wynik += "01";
-            assertEquals(wynik, UltraPotegowanie.poteguj(start, "-2"));
+            assertEquals(wynik, UltraPotegowanie.poteguj(start, "-1"));
         }
     }
     
@@ -137,7 +137,7 @@ public class UltraPotegowanieTest {
     
     @Test
     public void testNotacjaNaukowa2(){
-        assertEquals("0.00002",UltraPotegowanie.poteguj("2e3","-3"));
+        assertEquals("0.00000125",UltraPotegowanie.poteguj("2e3","-3"));
     }
   
      /*

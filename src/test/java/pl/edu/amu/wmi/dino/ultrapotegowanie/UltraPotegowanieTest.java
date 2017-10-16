@@ -125,7 +125,7 @@ public class UltraPotegowanieTest {
             start += "0";
             wynik = wynik.replace('1', '0');
             wynik += "01";
-            assertEquals(wynik, UltraPotegowanie.poteguj(start, "-2"));
+            assertEquals(wynik, UltraPotegowanie.poteguj(start, "-1"));
         }
     }
     
@@ -137,7 +137,7 @@ public class UltraPotegowanieTest {
     
     @Test
     public void testNotacjaNaukowa2(){
-        assertEquals("0.00000025",UltraPotegowanie.poteguj("0","-2"));
+        assertEquals("0.00000025",UltraPotegowanie.poteguj("2.5e3","-2"));
     }
   
      /*
@@ -153,7 +153,7 @@ public class UltraPotegowanieTest {
     //Daniel Grabowski
     @Test
     public void testPotegieComplexnumber(){
-        assertEquals("2+i",UltraPotegowanie.poteguj("-4", "0.5"));
+        assertEquals("2+i",UltraPotegowanie.poteguj("-4+i", "0.5"));
     }
     @Test
     public void testPotegiOdwrotnosci(){

@@ -121,10 +121,9 @@ public class UltraPotegowanieTest {
     public void testPow13() {
         String start = "1000000000";
         String wynik = "0.000000000001";
-        for(int i=0;i<1;i++){
+        for(int i=0;i<10;i++){
             start += "0";
             wynik = wynik.replace('1', '0');
-            wynik += "01";
             assertEquals(wynik, UltraPotegowanie.poteguj(start, "-2"));
         }
     }

@@ -166,7 +166,7 @@ public class UltraPotegowanieTest {
            // Kuba Chrobot
     @Test
     public void testPoteguja() {
-        assertEquals("123456789", UltraPotegowanie.poteguj("1", "123456789"));
+        assertEquals("123456789", UltraPotegowanie.poteguj("12345", "6789"));
     }
     
     @Test

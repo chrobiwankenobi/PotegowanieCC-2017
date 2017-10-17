@@ -119,7 +119,7 @@ public class UltraPotegowanieTest {
     //Rafal Muzia
     @Test 
     public void testPow13() {
-        String start = "10000000";
+        String start = "100000000";
         String wynik = "0.000000000001";
         for(int i=0;i<9;i++){
             start += "0";
